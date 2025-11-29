@@ -5,7 +5,7 @@ ip route show
 
 #Ping Gateway VPN
     #ping -c 4 10.10.14.1
-ping -c 4 {vpn gateway ip}
+ping -c 4 {vpn_gateway_ip}
 
 #Limpiar openvpn y interfaces tun
 sudo killall openvpn
@@ -20,7 +20,7 @@ sudo ip link delete tun3
 #Verificar 
 ip addr show | grep tun
 ip route show
-ping -c 4 {vpn gateway ip}
+ping -c 4 {vpn_gateway_ip}
 
 #Reconectar
 sudo openvpn starting_point_user.ovpn

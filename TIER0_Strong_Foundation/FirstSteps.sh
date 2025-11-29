@@ -17,7 +17,7 @@ nmap -p- -sV "$target_ip"
 nmap -p- --min-rate=1000 -T4 "$target_ip"
 
 #  --min-rate=1000 :    Acelera escaneo enviando al menos 1000 paquetes por segundo
-            #  -sC :    ejecuta los scripts de Nmap. Verifica vulnerabilidades comunes  y enumeración de puertos
-            #  -sS :    SYN stealth. temporización lenta -> Menos probable activar IDS
-            #  -T4 :    Acelera el escaneo usando plantillas de temporización más agresivas. IDS -> interpretan como ataque
-            #  -T2 :    Detect versions of services 
+        #  -sC :    ejecuta los scripts de reconocimiento Nmap. Verifica vulnerabilidades comunes  y enumeración de puertos
+        #  -sS :    SYN stealth. temporización lenta -> Menos probable activar IDS
+        #  -T4 :    Acelera el escaneo usando plantillas de temporización más agresivas. IDS -> interpretan como ataque
+        #  -T2 :    Detect versions of services 
