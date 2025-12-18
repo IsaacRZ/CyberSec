@@ -60,6 +60,60 @@ grep '65.2.161.68' auth.log | grep 'Accepted password' -A 3
     # o si la sesión duró más tiempo (login manual)
 
 
+grep 'session' auth.log
+grep 'session' auth.log | grep -v 'cron'
+
 grep 'systemd-logind' auth.log
 
 
+
+
+# ----------------------------------------------------------------------------
+# NOTAS FINALES SOBRE LOS COMANDOS
+# ----------------------------------------------------------------------------
+
+# GREP FLAGS IMPORTANTES:
+# -v: invierte la búsqueda (muestra lo que NO coincide)
+# -i: ignora mayúsculas/minúsculas
+# -o: muestra solo la parte que coincide
+# -P: usa regex de Perl
+# -A N: muestra N líneas después de cada coincidencia
+# -B N: muestra N líneas antes de cada coincidencia
+
+# AWK:
+# awk '{print $N}' : imprime el campo N de cada línea
+# Los campos se numeran desde $1, $0 es la línea completa
+
+# SED:
+# sed 's/patrón/reemplazo/' : sustituye patrón por reemplazo
+# Use \ para escapar caracteres especiales
+
+# SORT:
+# sort : ordena alfabéticamente
+# sort -r : ordena en reversa
+# sort -n : ordena numéricamente
+# sort -rn : ordena numéricamente en reversa (mayor a menor)
+
+# UNIQ:
+# uniq -c : cuenta líneas consecutivas idénticas
+# DEBE usarse después de sort para funcionar correctamente
+
+# PIPES (|):
+# Conectan la salida de un comando con la entrada del siguiente
+# Permiten encadenar transformaciones de datos
+
+# REDIRECCIÓN (>):
+# comando > archivo : guarda la salida en un archivo (sobrescribe)
+# comando >> archivo : agrega la salida al final de un archivo
+
+# LESS:
+# Paginador para ver archivos grandes
+# / para buscar, n para siguiente resultado, q para salir
+
+# HEAD:
+# head : muestra las primeras 10 líneas
+# head -N : muestra las primeras N líneas
+
+# TAIL:
+# tail : muestra las últimas 10 líneas
+# tail -N : muestra las últimas N líneas
