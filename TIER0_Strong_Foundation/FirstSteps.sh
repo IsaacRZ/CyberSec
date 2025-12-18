@@ -21,3 +21,4 @@ nmap -p- --min-rate=1000 -T4 "$target_ip"
         #  -sS :    SYN stealth. temporización lenta -> Menos probable activar IDS
         #  -T4 :    Acelera el escaneo usando plantillas de temporización más agresivas. IDS -> interpretan como ataque
         #  -T2 :    Detect versions of services 
+

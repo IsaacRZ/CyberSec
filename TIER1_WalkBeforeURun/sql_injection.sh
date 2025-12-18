@@ -19,7 +19,7 @@
 apt install gobuster
 git clone https://github.com/OJ/gobuster.git
 go get && go build
-go install 
+go install  
 cd /usr/share/wordlists
 git clone https://github.com/danielmiessler/SecLists.git
 
