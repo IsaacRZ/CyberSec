@@ -1,4 +1,10 @@
 #Brutus.zip
+#=====================
+#       Parte I: 
+#=====================
+#=====================
+#       Parte II: Grok  
+#=====================
 #Password: hacktheblue
 7z x Brutus.zip
 #or
@@ -65,12 +71,17 @@ grep 'session' auth.log | grep -v 'cron'
 
 grep 'systemd-logind' auth.log
 
+grep '65.2.161' auth.log | grep 'Failed password'
+grep '65.2.161' auth.log | grep 'Failed password' | wc -l
+    # wc -l : cuenta numero de lineas
 
 
 
 # ----------------------------------------------------------------------------
 # NOTAS FINALES SOBRE LOS COMANDOS
 # ----------------------------------------------------------------------------
+
+#/etc/shadow/ -> Hashes de todas las contraseñas(Huella digital)
 
 # GREP FLAGS IMPORTANTES:
 # -v: invierte la búsqueda (muestra lo que NO coincide)
@@ -117,3 +128,9 @@ grep 'systemd-logind' auth.log
 # TAIL:
 # tail : muestra las últimas 10 líneas
 # tail -N : muestra las últimas N líneas
+
+#GROK
+# Problema de logs no estructurados, dificil extraer patrones con awk
+# Grok convierte texto no estructurado a JSON estructurado
+# Para consultar facilmente con jq, Elasticsearch/Splunk, Logstash, Splunk, Graylog, otras SIEM
+
