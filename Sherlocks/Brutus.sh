@@ -134,3 +134,8 @@ grep '65.2.161' auth.log | grep 'Failed password' | wc -l
 # Grok convierte texto no estructurado a JSON estructurado
 # Para consultar facilmente con jq, Elasticsearch/Splunk, Logstash, Splunk, Graylog, otras SIEM
 
+mkdir go-brutus && cd go-brutus
+go mod init go-brutus
+touch main.go 
+go get github.com/elastic/go-grok
+code .
